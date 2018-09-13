@@ -1,0 +1,35 @@
+{
+    // 使用 IntelliSense 以得知可用的屬性。
+    // 暫留以檢視現有屬性的描述。
+    // 如需詳細資訊，請瀏覽: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.0.1",
+    "configurations": [
+        {
+            "name": "Run mocha",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
+            "protocol": "inspector",
+            "runtimeArgs": [
+                "--harmony",
+                "--no-deprecation"
+            ],
+            "skipFiles": [
+                "${workspaceRoot}/node_modules/**/*.js"
+            ],
+            "smartStep": true,
+            "stopOnEntry": false,
+            "args": [
+                "--timeout",
+                "15000",
+                "test/AppUtil_test.js",
+                "--no-timeouts"
+            ],
+            "cwd": "${workspaceRoot}",
+            "runtimeExecutable": null,
+            "env": {
+                "NODE_ENV": "testing"
+            }
+        }
+    ]
+}

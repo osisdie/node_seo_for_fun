@@ -1,0 +1,134 @@
+{
+  "app": {
+    "version": "0.0.1",
+    "host": "127.0.0.1",
+    "port": 3000,
+    "now": "2018-09-13 12:00:19"
+  },
+  "path": {
+    "echoFrom": "test/echo.txt",
+    "echoTo": "test/echo.txt.out",
+    "input": "test/input/https___google_com_tw",
+    "output": "test/output/",
+    "upload": "uploads/",
+    "download": "downloads/"
+  },
+  "seo": {
+    "pattern": {
+      "existsTag": {
+        "xpath": "{{root}} {{tag}}",
+        "msg": "This HTML without <{{tag}}> tag"
+      },
+      "existsAttr": {
+        "xpath": "{{root}} {{tag}}[{{attr}}]",
+        "msg": "This HTML without <{{tag}} {{attr}}> tag"
+      },
+      "existsNoAttr": {
+        "xpath": "{{root}} {{tag}}:not([{{attr}}])",
+        "msg": "This HTML without <{{tag}} {{attr}}> tag"
+      },      
+      "existsAttrVal": {
+        "xpath": "{{root}} {{tag}}[{{attr}}*={{value}}]",
+        "msg": "This HTML without <{{tag}} {{attr}}=\"{{value}}\"> tag"
+      },
+      "tagCountLessThan": {
+        "xpath": "{{root}} {{tag}}",
+        "msg": "This HTML have more than {{max}} <{{tag}}> tag"
+      }
+    },  
+    "rules": {
+      "rule1": {
+        "ruleFor": [
+          {
+            "pattern": "seo:pattern:existsNoAttr",
+            "fn": "checkShouldNotExist",
+            "root": "html",
+            "tag": "img",
+            "attr": "alt"
+          }
+        ]
+      },
+      "rule2": {
+        "ruleFor": [
+          {
+            "pattern": "seo:pattern:existsNoAttr",
+            "fn": "checkShouldNotExist",
+            "root": "html",
+            "tag": "a",
+            "attr": "rel"
+          }
+        ]
+      },
+      "rule3": {
+        "ruleFor": [
+          {
+            "pattern": "seo:pattern:existsTag",
+            "fn": "checkShouldExist",
+            "root": "head",
+            "tag": "title",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "pattern": "seo:pattern:existsAttrVal",
+            "fn": "checkShouldExist",
+            "root": "head",
+            "tag": "meta",
+            "attr": "name",
+            "value": "description",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "pattern": "seo:pattern:existsAttrVal",
+            "fn": "checkShouldExist",
+            "root": "head",
+            "tag": "meta",
+            "attr": "name",
+            "value": "keywords",
+            "min": 1,
+            "max": 1
+          }
+        ]
+      },
+      "rule4": {
+        "ruleFor": [
+          {
+            "pattern": "seo:pattern:tagCountLessThan",
+            "fn": "checkMaxOccurrence",
+            "root": "html",
+            "tag": "strong",
+            "max": 15,
+            "min": 0
+          }
+        ]
+      },
+      "rule5": {
+        "ruleFor": [
+          {
+            "pattern": "seo:pattern:tagCountLessThan",
+            "fn": "checkMaxOccurrence",
+            "root": "html",
+            "tag": "h1",
+            "max": 1,
+            "min": 0
+          }
+        ]
+      },
+      "rule101": {
+        "ruleFor": [
+          {
+            "pattern": "seo:pattern:existsAttrVal",
+            "fn": "checkShouldExist",
+            "root": "head",
+            "tag": "meta",
+            "attr": "name",
+            "value": "robots",
+            "min": 1,
+            "max": 1
+          }
+        ]
+      }
+    }
+  }
+}

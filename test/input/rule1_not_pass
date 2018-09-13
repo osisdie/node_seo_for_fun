@@ -1,0 +1,10 @@
+<html>
+  <head>
+    <title>HTML Reference</title>
+    <!-- you cannot pass-->
+    <img src="smiley.gif" height="42" width="42"> 
+  </head>
+  <body>
+    <h1>hello</h1>
+  </body>
+</html>

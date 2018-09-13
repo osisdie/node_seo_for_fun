@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <!-- you cannot pass-->
+    <!--title>HTML Reference</title>
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript"-->  
+    
+    <!-- you cannot pass-->
+    <img src="smiley.gif" height="42" width="42">   
+    
+    <!-- you cannot pass-->
+    <a href="https://www.w3schools.com">Visit W3Schools.com!</a>    
+  </head>
+  <body>
+    <!-- you cannot pass-->
+    <strong>Strong text1</strong>
+    <strong>Strong text2</strong>
+    <strong>Strong text3</strong>
+    <strong>Strong text4</strong>
+    <strong>Strong text5</strong>
+    <strong>Strong text6</strong>
+    <strong>Strong text7</strong>
+    <strong>Strong text8</strong>
+    <strong>Strong text9</strong>
+    <strong>Strong text10</strong>
+    <strong>Strong text11</strong>
+    <strong>Strong text12</strong>
+    <strong>Strong text13</strong>
+    <strong>Strong text14</strong>
+    <strong>Strong text15</strong>
+    <strong>Strong text16</strong>    
+    
+    <!-- you cannot pass-->
+    <h1>hello1</h1>
+    <h1>hello2</h1>
+    
+  </body>
+</html>
