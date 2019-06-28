@@ -8,10 +8,10 @@
   "dependencies": {
     "assert": "^1.4.1",
     "cheerio": "^1.0.0-rc.2",
-    "debug": "~0.7.4",
+    "debug": "^4.1.1",
     "express": "^4.16.3",
     "fs": "latest",
-    "mocha": "^1.21.5",
+    "mocha": "^6.1.4",
     "nconf": "~0.6.9",
     "nodemon": "^1.18.3",
     "request": "latest",
