@@ -11,7 +11,7 @@
     "debug": "^4.1.1",
     "express": "^4.16.3",
     "fs": "latest",
-    "mocha": "^6.1.4",
+    "mocha": "^6.2.3",
     "nconf": "~0.11.4",
     "nodemon": "^1.18.3",
     "request": "latest",
