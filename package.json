@@ -13,7 +13,7 @@
     "fs": "latest",
     "mocha": "^10.2.0",
     "nconf": "~0.11.4",
-    "nodemon": "^1.18.3",
+    "nodemon": "^2.0.20",
     "request": "latest",
     "should": "^13.2.3",
     "stream": "0.0.2"
