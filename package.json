@@ -9,7 +9,7 @@
     "assert": "^1.5.1",
     "cheerio": "^1.0.0-rc.12",
     "debug": "^4.3.4",
-    "express": "^4.19.2",
+    "express": "^4.21.1",
     "fs": "latest",
     "mocha": "^10.6.0",
     "nconf": "~0.11.4",
