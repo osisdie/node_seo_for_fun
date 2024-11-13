@@ -6,12 +6,12 @@
     "test": "mocha --timeout 15000"
   },
   "dependencies": {
-    "assert": "^1.4.1",
+    "assert": "^1.5.1",
     "cheerio": "^1.0.0-rc.12",
-    "debug": "^4.1.1",
-    "express": "^4.18.2",
+    "debug": "^4.3.4",
+    "express": "^4.19.2",
     "fs": "latest",
-    "mocha": "^10.2.0",
+    "mocha": "^10.4.0",
     "nconf": "~0.11.4",
     "nodemon": "^2.0.0",
     "request": "latest",
