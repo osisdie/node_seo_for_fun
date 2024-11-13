@@ -14,7 +14,6 @@
     "mocha": "^10.6.0",
     "nconf": "~0.11.4",
     "nodemon": "^3.0.0",
-    "request": "latest",
     "should": "^13.2.3",
     "stream": "0.0.2"
   }

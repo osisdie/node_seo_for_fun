@@ -1,12 +1,13 @@
 ### node_seo_for_fun
 ---
-Node application to parse HTML DOM document, validate its SEO scores, and show some alerting message for recommendation. 
+Node application to parse HTML DOM document, validate its SEO scores, and show some alerting message for recommendation.
 
-*series of *code_for_fun* *
+*series of code_for_fun*
 
-### Requirements
+### Pre-requsites
 ---
-Node.js 8.0 or greater
+- Node.js 8.0 or higher version
+
 
 ### Installation
 ---
@@ -22,16 +23,15 @@ $ npm install --global mocha
 ```sh
 $ npm install --save-dev mocha
 ```
-  * Mocha currently requires Node.js v6.x or newer.
+*Note: Mocha currently requires Node.js v6.x or newer.*
+
 
 ### Config your rules
 ---
-
 We have SEO rules defined in config file (**default**: config/config.json)
 
-* default SEO syntax patterns 
-
-```sh
+* Default SEO syntax patterns
+```json
 "seo": {
     "pattern": {
       "existsTag": {
@@ -45,7 +45,7 @@ We have SEO rules defined in config file (**default**: config/config.json)
       "existsNoAttr": {
         "xpath": "{{root}} {{tag}}:not([{{attr}}])",
         "msg": "This HTML without <{{tag}} {{attr}}> tag"
-      },      
+      },
       "existsAttrVal": {
         "xpath": "{{root}} {{tag}}[{{attr}}*={{value}}]",
         "msg": "This HTML without <{{tag}} {{attr}}=\"{{value}}\"> tag"
@@ -57,12 +57,11 @@ We have SEO rules defined in config file (**default**: config/config.json)
     }
 }
 ```
-  
+
 * prdefined SEO rules 1~5
 * define a custom rule 101
 
-
-```sh
+```json
 "seo": {
     "rules": {
       "rule1": {
@@ -161,57 +160,54 @@ We have SEO rules defined in config file (**default**: config/config.json)
 }
 ```
 
+
 ### Unit Test
 ---
 Test static AppUtil class usage, Most default SEO rules were predefined in config file (**default**: config/config.json). You'll see how to access them,
 
 * setCfgVal(): set a pair kv property to config file (**default**: config/config.json)
-
 * getCfgVal(): load a pair kv property from config file (**default**: config/config.json)
 
 ```sh
 $ npm test ./test/AppUtil_test.js
 ```
 
-Reader and writer classes usage. 
+Reader and writer classes usage.
 
 * super classes: ReaderBase, WriterBase
-
 * derived from ReaderBase: FileReader, StreamReader
-
 * derived from WriterBase: FileWriter, WriteStream, ConsoleWriter
 
 ```sh
 $ npm test./test/app_fs_test.js
 ```
 
-To unittest each rule's setttings and syntax. We simply create SingleRuleParser class, then checkConfigSyntax(). You got true of the syntax is valid.  
+To unittest each rule's setttings and syntax. We simply create SingleRuleParser class, then checkConfigSyntax(). You got true of the syntax is valid.
 ```sh
 $ npm test ./test/SingleRuleParser.js
 ```
 
-The high level SEO validator class: SEOValidator. We give test profolio bundled,
+The high level SEO validator class: SEOValidator. We have test profolio bundled,
 
-* rules 1,2,3,4,5,101, you can includeRules() or excludeRules() ondemand
-
+* rules 1,2,3,4,5,101, you can includeRules() or excludeRules() on demand
 * an input, output channel, and its necessary property (such as path or data)
-
-* lots of HTML examples 
+* some HTML examples under /downloads folder
 
 ```sh
 $ npm test ./test/SEOValidator_test.js
 ```
 
-### First App
+
+### Run the App
 ---
 Dowanload a html document from https://wwww.google.com.tw, store to this path for example, /test/input/www.google.com.tw.html
 
 test.js
-```sh
-let r = fs.createReadStream('test/input/www.google.com.tw.html')
+```js
+let readStream = fs.createReadStream('test/input/www.google.com.tw.html')
 let validator = new SEOValidator()
   .includeRules([1, 2, 3, 4, 5])
-  .setReader(AppUtil.createReader({ kind: RuleInputEnum.stream, stream: r }))
+  .setReader(AppUtil.createReader({ kind: RuleInputEnum.stream, stream: readStream }))
   .setWriter(AppUtil.createWriter({ kind: RuleOutputEnum.file, path: 'test/output/www.google.com.tw.html.out' }))
 
 return validator.validate()
@@ -226,8 +222,9 @@ return validator.validate()
     ])
   })
 ```
-  > Check it out the output data in the path 'test/output/www.google.com.tw.html.out' would match the rule and its corresponsive message 
-   
+  > Check it out the output data in the path 'test/output/www.google.com.tw.html.out' would match the rule and its corresponsive message
+
+
 ### Create your own custom Rule
 ---
 You can easily create a new rule, some hints are here:
@@ -240,7 +237,7 @@ You can easily create a new rule, some hints are here:
  * The last part would be **fn** property. That would be runtime evaluated to execute a function declared in the class of SingleRuleParser/SingleRuleParserBase (which means you can create your syntax fn if needed)
 
 config.json
-```sh
+```json
 "seo": {
     "rules": {
       "rule101": {

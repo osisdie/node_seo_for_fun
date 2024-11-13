@@ -3,13 +3,13 @@
     <!-- you cannot pass-->
     <!--title>HTML Reference</title>
     <meta name="description" content="Free Web tutorials">
-    <meta name="keywords" content="HTML,CSS,XML,JavaScript"-->  
-    
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript"-->
+
     <!-- you cannot pass-->
-    <img src="smiley.gif" height="42" width="42">   
-    
+    <img src="smiley.gif" height="42" width="42">
+
     <!-- you cannot pass-->
-    <a href="https://www.w3schools.com">Visit W3Schools.com!</a>    
+    <a href="https://www.w3schools.com">Visit W3Schools.com!</a>
   </head>
   <body>
     <!-- you cannot pass-->
@@ -28,11 +28,11 @@
     <strong>Strong text13</strong>
     <strong>Strong text14</strong>
     <strong>Strong text15</strong>
-    <strong>Strong text16</strong>    
-    
+    <strong>Strong text16</strong>
+
     <!-- you cannot pass-->
     <h1>hello1</h1>
     <h1>hello2</h1>
-    
+
   </body>
 </html>

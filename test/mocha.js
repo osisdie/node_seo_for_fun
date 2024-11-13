@@ -2,16 +2,16 @@
 
 const fs = require('fs'),
   assert = require('assert')
-const { 
+const {
   AppParam,
   AppResult
 } = require('../lib/models/app_dto.js')
-const { 
+const {
   AppUtil
 } = require('../lib/app_util.js')
 
 describe('Array', function () {
-  describe('#indexOf()', function () {
+  describe('Function indexOf()', function () {
     it('should return -1 when the value is not present', function () {
       assert.equal([1, 2, 3].indexOf(4), -1)
     })

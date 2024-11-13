@@ -1,9 +1,9 @@
 {
   "app": {
-    "version": "0.0.1",
+    "version": "0.1.0",
     "host": "127.0.0.1",
     "port": 3000,
-    "now": "2018-09-13 12:00:19"
+    "now": "2024-11-13 12:00:19"
   },
   "path": {
     "echoFrom": "test/echo.txt",
@@ -26,7 +26,7 @@
       "existsNoAttr": {
         "xpath": "{{root}} {{tag}}:not([{{attr}}])",
         "msg": "This HTML without <{{tag}} {{attr}}> tag"
-      },      
+      },
       "existsAttrVal": {
         "xpath": "{{root}} {{tag}}[{{attr}}*={{value}}]",
         "msg": "This HTML without <{{tag}} {{attr}}=\"{{value}}\"> tag"
@@ -35,7 +35,7 @@
         "xpath": "{{root}} {{tag}}",
         "msg": "This HTML have more than {{max}} <{{tag}}> tag"
       }
-    },  
+    },
     "rules": {
       "rule1": {
         "ruleFor": [

@@ -49,7 +49,7 @@ let NO_PASS_DATA = `
 </html>`
 
 describe('SEOValidator() requires(/lib/seo/seo_validator.js)', function () {
-  describe('#validate()', function () {
+  describe('Function validate()', function () {
     describe('pass, input:file, output:file', function () {
       let pass_tests = [
         {

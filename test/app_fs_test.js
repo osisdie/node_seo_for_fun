@@ -29,7 +29,7 @@ const { AppUtil } = require('../lib/app_util.js')
 const TEST_WORDS = 'awesome'
 
 describe('ReaderBase() requires(/lib/core/app_fs.js)', function () {
-  describe('#read()', function () {
+  describe('Function read()', function () {
     describe('FileReader', function () {
       it(`FileReader should return isSuccess, and contains "${TEST_WORDS}" data`, function () {
         let fr = new FileReader(AppUtil.getCfgVal('path:echoFrom'))
@@ -65,7 +65,7 @@ describe('ReaderBase() requires(/lib/core/app_fs.js)', function () {
 })
 
 describe('WriterBase() requires(/lib/core/app_fs.js)', function () {
-  describe('#write()', function () {
+  describe('Function write()', function () {
     describe('FileWriter', function () {
       it(`FileWriter should return isSuccess, and contains "${TEST_WORDS}" data`, function () {
         let fw = new FileWriter(AppUtil.getCfgVal('path:echoTo'))

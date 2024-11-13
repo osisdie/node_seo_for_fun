@@ -22,8 +22,8 @@ const {
 const CUSTOM_RULEID = 101
 
 describe('SingleRuleParser() requires(/lib/seo/seo_validator.js)', function () {
-  describe('#checkConfigSyntax()', function () {
-    describe('default rules 1~5', function () {
+  describe('Function checkConfigSyntax()', function () {
+    describe('Default rules 1~5', function () {
       let tests = [
         { rule: 1, expected: 1 },
         { rule: 2, expected: 1 },
@@ -49,7 +49,7 @@ describe('SingleRuleParser() requires(/lib/seo/seo_validator.js)', function () {
       })
     })
 
-    describe('rule custom', function () {
+    describe('Custom rules', function () {
       let tests = [
         { rule: 101, expected: 1 }
       ]
@@ -72,7 +72,7 @@ describe('SingleRuleParser() requires(/lib/seo/seo_validator.js)', function () {
     })
   })
 
-  describe('#analysis()', function () {
+  describe('Function analysis()', function () {
     describe(`1. Detect if any <img /> tag without alt attribute`, function () {
       describe('pass', function () {
         it('should return isSuccess without warnings', function () {
